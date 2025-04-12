@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  gost-gateway:
+    build: .
+    container_name: gost-gateway
+    restart: unless-stopped
+    ports:
+      - "5000-5020:5000-5020"
+    env_file:
+      - .env
